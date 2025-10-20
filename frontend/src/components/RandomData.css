@@ -1,0 +1,63 @@
+.random-data {
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+.random-data h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.generate-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 20px;
+}
+
+.generate-button:hover:not(:disabled) {
+  background-color: #218838;
+}
+
+.generate-button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.data-display {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid #dee2e6;
+}
+
+.data-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.data-item:last-child {
+  border-bottom: none;
+}
+
+.data-label {
+  font-weight: bold;
+  color: #495057;
+  font-size: 14px;
+}
+
+.data-value {
+  color: #6c757d;
+  font-size: 14px;
+}
