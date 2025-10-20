@@ -1,22 +1,11 @@
 import { asyncWithLDProvider } from 'launchdarkly-react-client-sdk';
 import Observability from '@launchdarkly/observability';
 import SessionReplay from '@launchdarkly/session-replay';
-import { FlagOverridePlugin, EventInterceptionPlugin } from '@launchdarkly/toolbar';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { faker } from '@faker-js/faker';
 import './index.css';
 import App from './App';
-
-// Create the plugin instances at module level so they can be shared
-export const flagOverridePlugin = new FlagOverridePlugin({
-  storageNamespace: 'ld-o11y-jam-overrides',
-});
-
-export const eventInterceptionPlugin = new EventInterceptionPlugin({
-  eventCapacity: 250,
-  enableLogging: true,
-});
 
 (async () => {
   const LDProvider = await asyncWithLDProvider({
@@ -34,8 +23,6 @@ export const eventInterceptionPlugin = new EventInterceptionPlugin({
         new SessionReplay({
           privacySetting: 'none',
         }),
-        flagOverridePlugin,
-        eventInterceptionPlugin,
       ],
       // other options...
     }
