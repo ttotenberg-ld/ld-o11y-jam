@@ -7,7 +7,6 @@ import FancyWidget from "./components/FancyWidget";
 import "./App.css";
 import { withLDConsumer } from "launchdarkly-react-client-sdk";
 import { useLaunchDarklyToolbar } from "@launchdarkly/toolbar";
-// import { LaunchDarklyToolbar } from "@launchdarkly/toolbar";
 import { flagOverridePlugin, eventInterceptionPlugin } from "./index";
 
 function App({ flags, ldClient /*, ...otherProps */ }) {
@@ -49,10 +48,6 @@ function App({ flags, ldClient /*, ...otherProps */ }) {
       <footer className="app-footer">
         <p>Backend API running on http://localhost:5001</p>
       </footer>
-      {/* <LaunchDarklyToolbar
-        flagOverridePlugin={flagOverridePlugin}
-        eventInterceptionPlugin={eventInterceptionPlugin}
-      /> */}
     </div>
   );
 }
