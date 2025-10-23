@@ -6,7 +6,7 @@
     "@faker-js/faker": "^10.1.0",
     "@launchdarkly/observability": "^0.4.5",
     "@launchdarkly/session-replay": "^0.4.5",
-    "@launchdarkly/toolbar": "^0.14.0-beta.1",
+    "@launchdarkly/toolbar": "^1.0.2-beta.1",
     "launchdarkly-react-client-sdk": "^3.9.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

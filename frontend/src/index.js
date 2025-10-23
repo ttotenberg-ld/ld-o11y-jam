@@ -1,11 +1,16 @@
 import { asyncWithLDProvider } from 'launchdarkly-react-client-sdk';
 import Observability from '@launchdarkly/observability';
 import SessionReplay from '@launchdarkly/session-replay';
+import { FlagOverridePlugin, EventInterceptionPlugin } from '@launchdarkly/toolbar';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { faker } from '@faker-js/faker';
 import './index.css';
 import App from './App';
+
+// Create plugin instances to share between SDK and toolbar
+export const flagOverridePlugin = new FlagOverridePlugin();
+export const eventInterceptionPlugin = new EventInterceptionPlugin();
 
 (async () => {
   const LDProvider = await asyncWithLDProvider({
@@ -23,6 +28,8 @@ import App from './App';
         new SessionReplay({
           privacySetting: 'none',
         }),
+        flagOverridePlugin,
+        eventInterceptionPlugin,
       ],
       // other options...
     }
