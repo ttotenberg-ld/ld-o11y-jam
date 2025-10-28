@@ -6,17 +6,9 @@ import BuggyComponent from "./components/BuggyComponent";
 import FancyWidget from "./components/FancyWidget";
 import "./App.css";
 import { withLDConsumer } from "launchdarkly-react-client-sdk";
-import { useLaunchDarklyToolbar } from "@launchdarkly/toolbar";
-import { flagOverridePlugin, eventInterceptionPlugin } from "./index";
 
 function App({ flags, ldClient /*, ...otherProps */ }) {
-  // Initialize toolbar with SDK mode using the same plugin instances
-  useLaunchDarklyToolbar({
-    flagOverridePlugin,
-    eventInterceptionPlugin,
-    position: 'bottom-right',
-    enabled: process.env.NODE_ENV === 'development'
-  });
+
   return (
     <div className="app">
       <header className="app-header">
@@ -25,7 +17,6 @@ function App({ flags, ldClient /*, ...otherProps */ }) {
       </header>
 
       <main className="app-main">
-        {/* Each component is wrapped in its own ErrorBoundary */}
         {flags.fancyWidget && (
           <ErrorBoundary fallbackMessage="Failed to load the fancy widget component.">
             <FancyWidget />

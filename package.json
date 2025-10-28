@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "@launchdarkly/toolbar": "^1.0.2-beta.1"
+    "@launchdarkly/toolbar": "^0.26.0"
   }
 }

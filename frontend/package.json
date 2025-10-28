@@ -1,12 +1,12 @@
 {
-  "name": "react-flask-frontend",
-  "version": "0.1.0",
+  "name": "ld-o11y-example",
+  "version": "3.6.0",
   "private": true,
   "dependencies": {
     "@faker-js/faker": "^10.1.0",
     "@launchdarkly/observability": "^0.4.5",
     "@launchdarkly/session-replay": "^0.4.5",
-    "@launchdarkly/toolbar": "^1.0.2-beta.1",
+    "@launchdarkly/toolbar": "^0.26.0",
     "launchdarkly-react-client-sdk": "^3.9.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

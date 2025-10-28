@@ -6,7 +6,7 @@ const BuggyComponent = () => {
 
   if (shouldThrow) {
     // This will cause a rendering error that ErrorBoundary can catch
-    throw new Error('Intentional error for testing ErrorBoundary!');
+    throw new Error('Intentional error for testing! Nothing to see here, move along...');
   }
 
   return (
